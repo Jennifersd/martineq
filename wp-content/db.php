@@ -12,7 +12,7 @@ function test_localhosts( ) {
 
   if (preg_match('/localhost/',$_ENV['DATABASE_URL'])) {
     preg_match('/(.*)\/wp-.*\/(\w*\.php)+$/', $_SERVER['REQUEST_URI'], $path);
-    return ("http://" . $_SERVER['HTTP_HOST'] . $path[1]);
+    return ("https://" . $_SERVER['HTTP_HOST'] . $path[1]);
   }
 
   else return false; // act as normal; will pull main site info from db
